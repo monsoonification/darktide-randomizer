@@ -5,7 +5,7 @@ A web-based randomizer for Warhammer 40,000: Darktide that generates a random se
 ## Features
 - You can figure this out
 
-## Access
+## Access (CLICK THIS BUTTON BELOW)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://monsoonification.github.io/darktide-randomizer)
 
 ## Local Development
