@@ -48,11 +48,6 @@ function App() {
 
     setGifUrl(randomGif);
     setShowGif(true);
-
-    setTimeout(() => {
-      console.log('Auto-hiding GIF');
-      setShowGif(false);
-    }, 5000);
   };
 
   const handleGifClose = () => {
@@ -160,7 +155,6 @@ Keystone: ${loadout.keystone || 'None'}
       {showGif && (
         <div className="gif-modal" onClick={handleGifClose}>
           <div className="gif-content" onClick={(e) => e.stopPropagation()}>
-            <button className="gif-close" onClick={handleGifClose}></button>
             <img
               src={gifUrl}
               alt="rawr"
@@ -170,7 +164,7 @@ Keystone: ${loadout.keystone || 'None'}
         </div>
       )}
       <div className="header">
-        <h1>Darktide Randomizer v1.0</h1>
+        <h1>Darktide Randomizer v1.0.2</h1>
         <p>For when you REALLY want a challenge for your games. Find a build that works... or not.</p>
       </div>
 

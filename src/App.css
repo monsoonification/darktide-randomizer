@@ -323,7 +323,6 @@ h1 {
   max-width: 500px;
   width: 90%;
   position: relative;
-  border: 2px solid #4d9fff;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   animation: scaleIn 0.3s ease;
 }
