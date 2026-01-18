@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 import { darktideData } from './data/darktideData';
 import { FaTwitch, FaYoutube } from 'react-icons/fa';
 import './App.css';
+import abaGif from './data/aba-guilty-gear.gif';
+import ivyGif from './data/ivydanceswag.gif';
+
+const gifOptions = [abaGif, ivyGif];
 
 function App() {
   const [loadout, setLoadout] = useState({
@@ -16,11 +20,6 @@ function App() {
   const [history, setHistory] = useState([]);
   const [showGif, setShowGif] = useState(false);
   const [gifUrl, setGifUrl] = useState('');
-
-  const gifOptions = [
-    '/data/aba-guilty-gear.gif',
-    '/data/ivydanceswag.gif'
-  ];
 
   // Load history from localStorage on mount
   useEffect(() => {
@@ -41,15 +40,15 @@ function App() {
 
   const handleMonsoonificationClick = () => {
     console.log('clicked!');
-    
+
     const randomIndex = Math.floor(Math.random() * gifOptions.length);
     const randomGif = gifOptions[randomIndex];
-    
+
     console.log('Selected GIF:', randomGif);
-    
+
     setGifUrl(randomGif);
     setShowGif(true);
-    
+
     setTimeout(() => {
       console.log('Auto-hiding GIF');
       setShowGif(false);
@@ -162,12 +161,11 @@ Keystone: ${loadout.keystone || 'None'}
         <div className="gif-modal" onClick={handleGifClose}>
           <div className="gif-content" onClick={(e) => e.stopPropagation()}>
             <button className="gif-close" onClick={handleGifClose}></button>
-            <img 
-              src={gifUrl} 
-              alt="rawr" 
+            <img
+              src={gifUrl}
+              alt="rawr"
               className="easter-egg-gif"
             />
-            <p className="gif-message">(Theres supposed to be a cute gif here but I couldn't figure out how to embed it correctly lmao)</p>
           </div>
         </div>
       )}
@@ -262,7 +260,7 @@ Keystone: ${loadout.keystone || 'None'}
           </div>
         </div>
       </div>
-      
+
       <div className="footer">
         <p>
           Made with love by{' '}
